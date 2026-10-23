@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepHat Store | Premium Cybersecurity Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Deep<span>Hat</span> Store</div>
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="cart-btn" onclick="toggleCart()">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Secure Your Digital Empire</h1>
+            <p>Premium security scripts, forensic tools, and automation suites engineered by DeepHat.</p>
+            <a href="#products" class="cta-btn">Browse Products</a>
+        </div>
+        <div class="hero-visual">
+            <!-- Placeholder for a cool 3D graphic or code snippet -->
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="title">ban_engine.py</span>
+                </div>
+                <pre><code>analyzer.analyze(account)
+# > SEVERITY: PERMANENT BAN
+# > RISK: 92/100</code></pre>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('script')">Scripts</button>
+            <button class="filter-btn" onclick="filterProducts('tool')">Tools</button>
+        </div>
+        <div class="product-grid" id="product-grid">
+            <!-- Products injected via JS -->
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Enterprise Grade</h3>
+            <p>Built with security-first architecture. No vulnerabilities, no backdoors.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>High Performance</h3>
+            <p>Optimized for speed. Process thousands of data points in seconds.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <h3>Open Source Core</h3>
+            <p>Transparency you can trust. Audit our code on GitHub.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2023 DeepHat. All rights reserved.</p>
+        <div class="socials">
+            <a href="#">GitHub</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="toggleCart()" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: $<span id="cart-total">0.00</span></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
